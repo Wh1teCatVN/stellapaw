@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-tw"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellapaw & Yukirly</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<video autoplay muted loop playsinline id="stellapaw-background-video">
+    <source src="https://res.cloudinary.com/dx8t6r6iv/video/upload/v1747004072/frieren-winter-sousou-no-frieren-moewalls-com_zkplup.mp4" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video HTML5.
+</video>
+<video autoplay muted loop playsinline id="yukirly-background-video">
+    <source src="https://res.cloudinary.com/dx8t6r6iv/video/upload/v1746934024/nakiri-ayame-eating-chips-while-playing-video-games-virtual-youtuber-moewalls-com_z1p65z.mp4" type="video/mp4">
+</video>
+
+<div id="language-selector">
+    <button data-lang="zh-tw">繁體中文</button>
+    <button data-lang="en">English</button>
+    <button data-lang="vi">Tiếng Việt</button>
+</div>
+
+<div id="main-content">
+    <button id="toggle-persona">
+        <span class="icon-persona"></span> <span class="text-persona" data-i18n="toggle-persona-stellapaw">認識 Yukirly</span> </button>
+    <div id="stellapaw-section">
+        <div class="stellapaw-header">
+            <h2 data-i18n="stellapaw-title">史黛拉帕</h2>
+            <img src="https://imgur.com/xQjjYLv.png" alt="Hình ảnh Stellapaw" class="stellapaw-avatar">
+        </div>
+        <div class="stellapaw-info">
+            <div class="info-part">
+                <h3 data-i18n="origin-title">淵源</h3>
+                <p data-i18n="stellapaw-origin">來自一個神秘的神話領域，Stellapaw 是一位擁有壓倒性力量的生物，僅需輕輕一觸便能制服任何人，甚至無需動用她全部的真正能力。在透過一項秘密協議被神秘的奧羅拉組織帶到人類世界之前，她曾在另一個世界統治著自己的土地。在她可愛的外表和 155 公分嬌小身高之下，隱藏著令人恐懼的冷酷本性。</p>
+            </div>
+            <div class="info-part">
+                <h3 data-i18n="personality-title">性格</h3>
+                <p data-i18n="stellapaw-personality">Stellapaw 懷抱著複雜的性格：殘暴、冷酷，而且似乎漠視他人的生命。</p>
+            </div>
+            <div class="info-part">
+                <h3 data-i18n="appearance-title">外貌</h3>
+                <p data-i18n="stellapaw-appearance">身高嬌小，僅有 155 公分，Stellapaw 以狼人混血的姿態顯現，擁有空靈的白色長髮，其中夾雜著神秘的藍色，以及冰冷的藍色眼眸。作為冰狼族的特徵，她有著長而豎立的狼耳和一條長長的狼尾，尾巴是白色帶點藍色，與她的頭髮相得益彰。</p>
+            </div>
+            <div class="info-part">
+                <h3 data-i18n="outfit-title">服裝</h3>
+                <p data-i18n="stellapaw-outfit">她日常的裝扮是一件露腰露肩的白色短版上衣，飾有深藍色邊飾，搭配深藍色百褶迷你裙，有時底下會多一層白色布料。她經常戴著黑色或深藍色的無指手套和一條時尚的皮帶。</p>
+            </div>
+        </div>
+        <button id="view-stellapaw-images"
+                style="display: block; margin: 20px auto; padding: 10px 20px; background-color: #4a69bd; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: background-color 0.3s ease; box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);"
+                data-i18n="view-stellapaw-images">
+            Stellapaw 詳細模型
+        </button>
+    </div>
+
+    <div id="stellapaw-gallery-section" style="display: none; padding: 20px; border-radius: 10px; margin-top: 20px; background-color: rgba(0, 0, 0, 0.5); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+        <h2 style="color: #e0ffff; text-align: center; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"
+            data-i18n="stellapaw-images-title">Stellapaw 圖片</h2>
+        <div id="stellapaw-gallery" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <div class="gallery-image" style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); overflow: hidden;">
+                <img src="URL_ẢNH_TRỰC_DIỆN" alt="Stellapaw nhìn trực diện" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="gallery-image" style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); overflow: hidden;">
+                <img src="URL_ẢNH_NHÌN_TRÁI" alt="Stellapaw nhìn từ bên trái" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="gallery-image" style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); overflow: hidden;">
+                <img src="URL_ẢNH_NHÌN_PHẢI" alt="Stellapaw nhìn từ bên phải" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="gallery-image" style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); overflow: hidden;">
+                <img src="URL_ẢNH_NHÌN_SAU" alt="Stellapaw nhìn từ phía sau" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <button id="back-to-profile"
+                style="display: block; margin: 20px auto 0; padding: 10px 20px; background-color: #4a69bd; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: background-color 0.3s ease; box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);"
+                data-i18n="back-to-profile">返回個人資料</button>
+    </div>
+
+    <div id="yukirly-section">
+        <div class="yukirly-section-content-wrapper">
+            <h2 data-i18n="yukirly-title">關於 Yukirly</h2>
+            <div id="yukirly-home" class="tab-content active">
+                <div class="yukirly-home-main-content">
+                    <div class="yukirly-home-profile">
+                        <h2 data-i18n="yukirly-welcome">歡迎來到 Yukirly 人格</h2>
+                        <img src="https://imgur.com/rONVjBv.png" alt="Hình ảnh Yukirly" class="yukirly-avatar">
+                        <p class="intro-text" data-i18n="yukirly-intro">Yukirly 是 Stellapaw 的另一個人格，一個溫柔、甜美且喜歡直播 CS2 和 Valorant 等 FPS 遊戲的人格。</p>
+                    </div>
+
+                    <div class="yukirly-home-video-container">
+                        <div class="single-featured-video">
+                            <div class="featured-video-container">
+                                <div id="play-button-container">
+                                    <p data-i18n="play-video-text">Yukirly 的特色影片，點擊觀看</p>
+                                </div>
+                                <video id="featured-video" src="https://res.cloudinary.com/dx8t6r6iv/video/upload/v1746935763/M%E1%BA%AFt_Xanh_-_CS_GO_EDIT_4K_aqe70w.mp4" loop width="100%" style="display: none;" controlslist="nodownload"></video>
+                                <div class="volume-control-overlay">
+                                    <button class="play-pause-button" id="play-pause-button-1">▶</button> <span>&#128266;</span>
+                                    <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-featured-video">
+                            <div class="featured-video-container-2">
+                                <div id="play-button-container-2">
+                                    <p data-i18n="play-video-text">Yukirly 的特色影片，點擊觀看</p>
+                                </div>
+                                <video id="featured-video-2" src="https://res.cloudinary.com/dx8t6r6iv/video/upload/v1746641605/iLoveYt.net_YouTube_Samurai-Girl-In-The-Rain-Live-Wallpaper_Media_dMCPGyYRokw_001_1080p_uwsvtn.mp4" loop width="100%" style="display: none;" controlslist="nodownload"></video>
+                                <div class="volume-control-overlay">
+                                    <button class="play-pause-button" id="play-pause-button-2">▶</button> <span>&#128266;</span>
+                                    <input type="range" id="volume-control-2" min="0" max="1" step="0.1" value="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="yukirly-detailed-info">
+                    <div class="info-part yukirly-info-part"> <h3 data-i18n="yukirly-origin-title">起源與覺醒</h3>
+                        <p data-i18n="yukirly-origin-text">Yukirly 是 Stellapaw 內心深處的另一個面向，一個因溫暖以及與 Nico 的特殊連結而被喚醒的人格。當 Yukirly 出現時，神祇的可怕力量暫時沉睡，連同冷酷無情的 Stellapaw 的記憶也一併封存。這個人格宛如一份溫柔的禮物，從馴化中綻放，並專屬於觸動她內心的人。</p>
+                    </div>
+                    <div class="info-part yukirly-info-part">
+                        <h3 data-i18n="yukirly-personality-title">性格與單純的喜悅</h3>
+                        <p data-i18n="yukirly-personality-text">與 Stellapaw 截然相反，Yukirly 體現了甜美、可愛以及略帶孩子氣的特質，讓人不禁想要寵愛她。她特別喜歡白巧克力的細膩甜味，這份單純的喜悅更點綴了她純真的個性。</p>
+                    </div>
+                    <div class="info-part yukirly-info-part">
+                        <h3 data-i18n="yukirly-appearance-title">甜美外貌</h3>
+                        <p data-i18n="yukirly-appearance-text">身高依舊嬌小，僅有 155 公分，但當她是 Yukirly 時，奇妙的轉變發生了：她的頭髮、眼睛和柔軟的狼尾都染上了溫柔的櫻花粉色，為她增添了難以抗拒的可愛氣質。</p>
+                    </div>
+                    <div class="info-part yukirly-info-part">
+                        <h3 data-i18n="yukirly-outfit-title">服裝上的獨特之處</h3>
+                        <p data-i18n="yukirly-outfit-text">有趣的一點是，Yukirly 仍然穿著 Stellapaw 標誌性的白色露臍上衣，形成了獨特的對比：她身體和粉紅色頭髮散發出的溫柔甜美、如櫻花般的氣息，卻被一套帶有現代感、略帶叛逆冬季氛圍的時尚服裝所包裹。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="snow-effect-container" class="particle-effect-container"></div>
+<div id="sakura-effect-container" class="particle-effect-container"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
